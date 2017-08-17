@@ -40,47 +40,12 @@
     <script src="assets/js/prefixfree.min.js"></script>
     <script src="./node_modules/angular/angular.js"></script>
     <script src="./node_modules/angular-route/angular-route.js"></script>
-    <script>
-      // 1.首页模块
-        var app = angular.module('main', ['ngRoute'])
-
-        // 2.路由规则
-        app.config(['$routeProvider',function($routeProvider){
-            $routeProvider
-                .when('/home_page',{// #/home_page
-                    templateUrl:'tpl/home.html',
-                    controller:'homeController'
-                })
-                .when('/in_theaters',{  // #/in_theaters
-                    templateUrl:'./tpl/in_theaters.html',
-                    controller:'in_theatersController'
-                })
-                .when('/coming_soon',{  // #/coming_soon
-                    templateUrl:'./tpl/coming_soon.html',
-                    controller:'coming_soonController'
-                })
-                .when('/top250',{  // #/top250
-                    templateUrl:'./tpl/top250.html',
-                    controller:'top250Controller'
-                }); 
-        }])
-
-        app.controller('homeController', ['$scope',function($scope){
-           
-        }])
-
-        app.controller('in_theatersController', ['$scope',function($scope){
-            
-        }])
-
-        app.controller('coming_soonController', ['$scope',function($scope){
-            
-        }])
-
-        app.controller('top250Controller', ['$scope',function($scope){
-            
-        }])
-    </script>
+    <script src="./app.js"></script>
+    <script src="./home/home.js"></script>
+    <script src="./coming_soon/coming_soon.js"></script>
+    <script src="./in_theaters/in_theaters.js"></script>
+    <script src="./top250/top250.js"></script>
+    
 </body>
 
 </html>
